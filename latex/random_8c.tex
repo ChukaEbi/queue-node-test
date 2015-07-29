@@ -1,0 +1,44 @@
+\section{random.c File Reference}
+\label{random_8c}\index{random.c@{random.c}}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include \char`\"{}node.h\char`\"{}}\par
+{\tt \#include $<$time.h$>$}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+char $\ast$ \bf{rand\-Upper\-String} (int length)
+\item 
+int \bf{main} ()
+\item 
+char \bf{rand\-Upper} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{random.c@{random.c}!main@{main}}
+\index{main@{main}!random.c@{random.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int main ()}\label{random_8c_e66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+main function for testing the randomized queue generation \index{random.c@{random.c}!randUpper@{randUpper}}
+\index{randUpper@{randUpper}!random.c@{random.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char rand\-Upper ()}\label{random_8c_5fe82ac9fd267030625c517a9fc03a4c}
+
+
+generate uppercase character \index{random.c@{random.c}!randUpperString@{randUpperString}}
+\index{randUpperString@{randUpperString}!random.c@{random.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ rand\-Upper\-String (int {\em length})}\label{random_8c_51e49b1e175ac51052ea5dd330cbea98}
+
+
+Generate a null-terminated string of random Upper-Case ASCII characters, A through Z, with specified length. The string is allocated using malloc().
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em length}]Number of characters in the string (not counting the terminator). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The character\end{Desc}
+Note: This function uses the standard function random(), so it will always return the same sequence of random characters, unless you first call srand() with a different seed. For example, srand(time(0)) Should give you a different sequence each time. 
